@@ -1,6 +1,6 @@
 # Micro web framework benchmarks
 
-## Express
+## Express (node.js)
 
 ### rewrk -c 100 -t 10 -d 30s -h http://127.0.0.1:13000
 
@@ -41,7 +41,7 @@ Benchmarking 500 connections @ http://127.0.0.1:13000/add for 30 seconds
     Total: 4.94 MB Transfer Rate: 167.00 KB/Sec
 ```
 
-## Fastify
+## Fastify (node.js)
 
 ### rewrk -c 100 -t 10 -d 30s -h http://127.0.0.1:13001
 
@@ -80,4 +80,49 @@ Benchmarking 500 connections @ http://127.0.0.1:13001/add for 30 seconds
     Total:  22294  Req/Sec: 736.48
   Transfer:
     Total: 3.64 MB Transfer Rate: 122.99 KB/Sec
+```
+
+## Polka (node.js)
+
+`rewrk` is returning 404 errors at the moment. No tests were possible.
+
+## Go stdlb (go)
+
+### rewrk -c 100 -t 10 -d 30s -h http://127.0.0.1:13003
+
+```
+Benchmarking 100 connections @ http://127.0.0.1:13003 for 30 seconds
+  Latencies:
+    Avg      Stdev    Min      Max
+    114.19ms  19.80ms  7.65ms   426.32ms
+  Requests:
+    Total:  26278  Req/Sec: 874.42
+  Transfer:
+    Total: 3.21 MB Transfer Rate: 109.30 KB/Sec
+```
+
+### rewrk -c 200 -t 10 -d 30s -h http://127.0.0.1:13003/products
+
+```
+Benchmarking 200 connections @ http://127.0.0.1:13003/products for 30 seconds
+  Latencies:
+    Avg      Stdev    Min      Max
+    268.54ms  29.82ms  65.78ms  457.79ms
+  Requests:
+    Total:  22424  Req/Sec: 744.40
+  Transfer:
+    Total: 6.93 MB Transfer Rate: 235.53 KB/Sec
+```
+
+### rewrk -c 500 -t 10 -d 30s -h http://127.0.0.1:13003/add
+
+```
+Benchmarking 500 connections @ http://127.0.0.1:13003/add for 30 seconds
+  Latencies:
+    Avg      Stdev    Min      Max
+    597.83ms  156.53ms  9.30ms   3704.70ms
+  Requests:
+    Total:  24969  Req/Sec: 824.96
+  Transfer:
+    Total: 2.81 MB Transfer Rate: 95.06 KB/Sec
 ```
