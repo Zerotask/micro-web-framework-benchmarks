@@ -1,0 +1,16 @@
+[package]
+name = "actix"
+version = "0.1.0"
+authors = ["Zerotask <Zerotask@users.noreply.github.com>"]
+edition = "2018"
+
+[profile.release]
+opt-level = 'z' # Optimize for size.
+lto = true # Enable Link Time Optimization
+codegen-units = 1 # Reduce number of codegen units to increase optimizations.
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "3"
+serde = "*"
