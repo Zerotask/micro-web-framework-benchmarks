@@ -21,3 +21,12 @@ the root package.json provides some scripts to start them:
 - `npm run start:rust:actix`
 - `npm run start:nodejs:express`
 - `npm run start:nodejs:fastify`
+
+## Alternative HTTP Benchmark tools
+- [ali](https://github.com/nakabonne/ali) - graphical tool written in Go
+- [bombardier](https://github.com/codesenberg/bombardier) - written in Go
+- [cassowary](https://github.com/rogerwelin/cassowary) - written in Go
+- [hey](https://github.com/rakyll/hey) - written in Go
+- [httpit](https://github.com/gonetx/httpit) - written in Go
+- [oha](https://github.com/hatoo/oha) - some graphic, written in Rust
+- [vegeta](https://github.com/tsenart/vegeta) - graphical options, written in Go
