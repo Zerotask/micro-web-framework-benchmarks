@@ -2,7 +2,7 @@
 
 Compile go programs with `go build -ldflags "-s -w" -o server.exe`
 
-## stdlib
+## stdlib (Go 1.16.4)
 
 URL: https://golang.org/pkg/net/http/
 
@@ -45,7 +45,7 @@ Benchmarking 500 connections @ http://127.0.0.1:13003/add for 30 seconds
     Total: 2.81 MB Transfer Rate: 95.06 KB/Sec
 ```
 
-## Fiber
+## Fiber (2.12.0)
 
 URL: https://github.com/gofiber/fiber
 
@@ -88,7 +88,7 @@ Benchmarking 500 connections @ http://127.0.0.1:13004/add for 30 seconds
     Total: 2.56 MB Transfer Rate: 86.36 KB/Sec
 ```
 
-## Echo
+## Echo (4.3.0)
 
 URL: https://github.com/labstack/echo
 

@@ -1,6 +1,6 @@
 # Rust related benchmarks
 
-## Actix (rust)
+## Actix (3.3.2)
 
 ### rewrk -c 100 -t 10 -d 30s -h http://127.0.0.1:13005
 
@@ -85,3 +85,9 @@ Benchmarking 500 connections @ http://127.0.0.1:13005/add for 30 seconds
   Transfer:
     Total: 2.42 MB Transfer Rate: 81.90 KB/Sec
 ```
+
+## Rocket (0.5.0-rc.1)
+
+URL: https://github.com/SergioBenitez/Rocket
+
+TODO after 0.5.0 release has come out.
