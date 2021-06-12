@@ -1,0 +1,25 @@
+{
+  "name": "micro-web-framework-benchmarks",
+  "version": "1.0.0",
+  "description": "Micro web framework benchmarks created with rewrk",
+  "scripts": {
+    "start:rust:actix": "cargo run --manifest-path ./rust/actix/Cargo.toml",
+    "start:nodejs:express": "nodemon ./nodejs/express/server.js",
+    "start:nodejs:fastify": "nodemon ./nodejs/fastify/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zerotask/micro-web-framework-benchmarks.git"
+  },
+  "keywords": [
+    "http",
+    "benchmarks",
+    "webframeworks"
+  ],
+  "author": "Patrick Hintermayer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zerotask/micro-web-framework-benchmarks/issues"
+  },
+  "homepage": "https://github.com/Zerotask/micro-web-framework-benchmarks#readme"
+}

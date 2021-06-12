@@ -1,3 +1,4 @@
 nodejs/express/node_modules/
 nodejs/fastify/node_modules/
 rust/actix/target/
+go/fiber/vendor/
