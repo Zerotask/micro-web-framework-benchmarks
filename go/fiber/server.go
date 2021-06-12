@@ -17,11 +17,11 @@ func add(value1, value2 int) int {
 func main() {
 	app := fiber.New()
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello world")
+	app.Get("/", func(context *fiber.Ctx) error {
+		return context.SendString("Hello world")
 	})
 
-	app.Get("/products", func(c *fiber.Ctx) error {
+	app.Get("/products", func(context *fiber.Ctx) error {
 		products := []Product{
 			{1, "Fridge1", 200.99},
 			{2, "Fridge2", 300.99},
@@ -29,11 +29,11 @@ func main() {
 			{4, "Fridge4", 500.99},
 			{5, "Fridge5", 600.99},
 		}
-		return c.JSON(products)
+		return context.JSON(products)
 	})
 
-	app.Get("/add", func(c *fiber.Ctx) error {
-		return c.JSON(add(3, 8))
+	app.Get("/add", func(context *fiber.Ctx) error {
+		return context.JSON(add(3, 8))
 	})
 
 	// http://127.0.0.1:13004

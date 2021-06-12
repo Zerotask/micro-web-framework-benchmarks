@@ -1,5 +1,7 @@
 # Go related benchmarks
 
+Compile go programs with `go build -ldflags "-s -w" -o server.exe`
+
 ## stdlib
 
 URL: https://golang.org/pkg/net/http/
@@ -84,4 +86,47 @@ Benchmarking 500 connections @ http://127.0.0.1:13004/add for 30 seconds
     Total:  24669  Req/Sec: 811.27
   Transfer:
     Total: 2.56 MB Transfer Rate: 86.36 KB/Sec
+```
+
+## Echo
+
+URL: https://github.com/labstack/echo
+
+### rewrk -c 100 -t 10 -d 30s -h http://127.0.0.1:13006
+
+```
+Benchmarking 100 connections @ http://127.0.0.1:13006 for 30 seconds
+  Latencies:
+    Avg      Stdev    Min      Max
+    118.35ms  62.19ms  2.43ms   2513.31ms
+  Requests:
+    Total:  25372  Req/Sec: 844.05
+  Transfer:
+    Total: 3.10 MB Transfer Rate: 105.51 KB/Sec
+```
+
+### rewrk -c 200 -t 10 -d 30s -h http://127.0.0.1:13006/products
+
+```
+Benchmarking 200 connections @ http://127.0.0.1:13006/products for 30 seconds
+  Latencies:
+    Avg      Stdev    Min      Max
+    285.15ms  56.35ms  14.70ms  2019.41ms
+  Requests:
+    Total:  21183  Req/Sec: 700.99
+  Transfer:
+    Total: 6.69 MB Transfer Rate: 226.59 KB/Sec
+```
+
+### rewrk -c 500 -t 10 -d 30s -h http://127.0.0.1:13006/add
+
+```
+Benchmarking 500 connections @ http://127.0.0.1:13006/add for 30 seconds
+  Latencies:
+    Avg      Stdev    Min      Max
+    623.91ms  99.31ms  15.61ms  1126.60ms
+  Requests:
+    Total:  23992  Req/Sec: 792.45
+  Transfer:
+    Total: 2.86 MB Transfer Rate: 96.73 KB/Sec
 ```
